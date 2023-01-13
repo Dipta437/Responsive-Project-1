@@ -1,0 +1,64 @@
+$color-1 : #cdb4db ; // Mobile
+$color-2 : #fff1e6 ; // Tablet
+$color-3 : #52b788 ; // Laptop
+$color-4 : #bee1e6 ; // Desktop
+
+$mobile : 576px;
+$tablet : 768px;
+$laptop : 992px;
+$desktop : 1200px;
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    body{
+        font-size: 40px;
+        font-family: san-serif;
+    }
+}
+.fluid-container {
+    height: 100vh;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    display: grid;
+    place-content: center;
+}
+
+.text-screen {
+    
+}
+
+#size{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    font-size: 40px;
+    transform: translateX(-50%);
+    color: red;
+}
+
+@media (max-width : $desktop){
+    .fluid-container {
+        background-color: $color-4;
+    }
+}
+
+@media (max-width : $laptop){
+    .fluid-container {
+        background-color: $color-3;
+    }
+}
+
+@media (max-width){
+    .fluid-container {
+        background-color: $color-2;
+    }
+}
+
+@media (max-width : $mobile){
+    .fluid-container {
+        background-color: $color-1;
+    }
+}
